@@ -1,374 +1,333 @@
-The Ford Model / Unified Whisper Theory
-Quantum-first horizon microstructure and a covariant entropy-flux engine
-Alan Ford
-January 25, 2026
-Abstract
-We present a quantum-first framework in which spacetime geometry and the infrared
-stress–energy content of the Universe emerge from horizon microstructure. The primary
-object is a partition functional over geometries and horizon microstates. Stationarity of
-this object yields an emergent mean-geometry field equation whose source is a total stress
-operator decomposed into: (i) an “inhale” (sequestration) entropy-flux tensor, (ii) an “exhale”
-inversion/release tensor triggered by congruence focusing and internal operator stress, and
-(iii) an emergent spectrum stress replacing fundamental Standard-Model matter in the
-canonical formulation. A minimal three-patch (qutrit) horizon subspace is shown to force
-an su(3) algebra from projected seam couplings, with an explicit operator dictionary and
-matrix realization. Inversion activation is locked to a commutator stress invariant Γ and a
-Raychaudhuri-driven gate Ξ, removing ad hoc switches. The paper is written to be fully
-replicable: all definitions, matrices, and algorithmic checks required to reproduce the algebraic
-closure and derived quantities are included.
-1 Program summary (what we are doing and why)
-The Ford Model is built around one decision: the theory is quantum at the root. Classical
-spacetime geometry is not assumed; it is obtained as a controlled, thermodynamic/mean-field
-limit of a deeper horizon microstructure. Large-scale cosmic acceleration is not attributed to a
-fundamental dark-energy fluid; instead, it arises as an effective response to a net horizon entropy
-flux with two coupled channels:
-• Inhale / sequestration: an entropy-directed flux sector that contributes an effective
-stress tensor τ(H)
-µν.
-• Exhale / inversion: a burst-like release sector τ(inv)
-µν triggered by congruence focusing
-and internal operator stress; it enables cyclic dynamics (turnaround and bounce).
-In the canonical (latest) formulation, what appears in the infrared as “matter” is treated as an
-emergent spectrum stress τ(spec)
-µν built from modular horizon modes, rather than as a fundamental
-Standard Model sector.
-1.1 What a reviewing scientist will look for
-A critical reviewer will check:
-1. The foundational definition of Z and whether the ordering is genuinely quantum-first.
-2. A logically complete route from Z to the field equation (stationarity, expectation
-values, and conservation).
-3. Explicit, falsifiable microstructure claims: not metaphors, but concrete operator
-sets, matrices, and closure checks.
-1
-4. No hand-picked “magic” choices: the operator basis and its size must be forced by
-symmetry and physical construction.
-5. Triggering logic for inversion: it must be endogenous (geometry and microstress), not
-a manually placed switch.
-This paper is organized to make those checks straightforward.
-2 Quantum root: the canonical definition of Z
-2.1 Primary object
-The primary object is the quantum-statistical partition functional
-Z ≡ Dg TrHhorizon exp−
-1
-ℏ Itot[g; H]. (1)
-Here Dg is a measure over geometries, and the trace is taken over a horizon microstructure
-Hilbert space Hhorizon.
-2.2 Patch factorization (microstructure picture)
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=1in]{geometry}
+\usepackage{amsmath,amssymb,mathtools}
+\usepackage{bm}
+\usepackage{array}
+\usepackage{hyperref}
+\usepackage{physics}
+\usepackage{microtype}
+
+\hypersetup{colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue}
+
+\title{The Ford Model / Unified Whisper Theory\\
+\large Quantum-first horizon microstructure and a covariant entropy-flux engine}
+\author{Alan Ford}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+We present a quantum-first, horizon-microstructure framework in which mean spacetime geometry and effective matter arise as thermodynamic limits of horizon degrees of freedom. The primary object is a partition functional over geometries and horizon microstates. A covariant entropy-flux engine (the Ford Entropy Flux Tensor) provides an ``inhale/exhale'' mechanism capable of driving late-time expansion without dark energy and enabling cyclic dynamics via an inversion channel. Gauge structure and particle-sector observables are treated as emergent spectral excitations of modular horizon operators rather than fundamental Standard Model fields. We provide a minimal, non-overfit SU(3) operator dictionary on a qutrit subspace and define commutator-stress invariants used to lock inversion strength to geometric focusing and modular thresholds.
+\end{abstract}
+
+\section{Quantum Root and Canonical Ordering}
+
+\subsection{Primary partition functional}
+The Ford Model is quantum at the root. The primary object is the partition functional over geometries and horizon microstates:
+\begin{equation}
+Z \;\equiv\; \int \mathcal D g \;\;\mathrm{Tr}_{\mathcal H_{\text{horizon}}}\;
+\exp\!\left[-\frac{1}{\hbar}\, I_{\text{tot}}[g;\,\mathcal H]\right].
+\label{eq:Z}
+\end{equation}
+
+\subsection{Horizon Hilbert-space factorization (patch picture)}
 We assume the horizon microstructure factorizes into patches:
-Hhorizon =
-p∈patches
-Hp, Hp
-∼
-= Cdp
-, (2)
-with patch entropy
-Sp ≡kBln dp, SH=
-Sp. (3)
-p
-2.3 Total action split (canonical; no fundamental SM sector)
-Itot = IGR[g] + IH[g,H] + Iint[g; H], (4)
-with the Einstein–Hilbert part
-IGR[g] = c3
-16πG (R−2Λ0)√−gd4x. (5)
-3 Emergent mean-geometry field equation
-3.1 Stationarity
-The canonical stationarity condition is
-δln Z
-δgµν(x) = 0. (6)
-3.2 Emergent field equation
-Stationarity implies an emergent mean-geometry equation
-Gµν + Λ0gµν =
-8πG
-c4 τtotal
-µν , (7)
-where Gµν is the Einstein tensor of the emergent mean geometry and τtotal
-µν is the total emergent
-stress operator.
-2
-3.3 Conservation
-Covariance and the Bianchi identity require
-∇µ τtotal
-µν = 0. (8)
-4 Ford entropy-flux engine: inhale, exhale, spectrum
-4.1 Decomposition
-We decompose the total source as
-τtotal
-µν
-= τ(H)
-µν + τ(inv)
-µν + τ(spec)
-µν. (9)
-4.2 Area-law anchor and entropy surface density
-We anchor to the Bekenstein–Hawking area law,
-SBH =
-kBc3
-4ℏGA, (10)
-and define an entropy surface density
-η≡
-δS
-δA=
-kBc3
-4ℏG fbh(z). (11)
-Update (latest convention): for the cosmology channel we use
-fbh(z) = ρbh(z)
-ρcrit(z). (12)
-4.3 Inhale tensor (null-congruence carrier form)
-Let kµ be a (locally defined) null generator of the relevant horizon congruence, and σµν its shear.
-A compact covariant carrier used in the theory is
-ℏc
-τ(H)
-µν
-2π
-1
-k(µkν)−
-2(kλkλ)gµν η+ σµνη . (13)
-For a strictly null congruence kλkλ = 0; it is retained as a regularization/generalization place-
+\begin{equation}
+\mathcal H_{\text{horizon}} \;=\; \bigotimes_{p\in \text{patches}} \mathcal H_{p},
+\qquad
+\mathcal H_{p}\cong \mathbb C^{d_p}.
+\end{equation}
+Define patch entropies
+\begin{equation}
+S_p \;\equiv\; k_B \ln d_p
+\qquad\Rightarrow\qquad
+S_{\mathcal H}=\sum_p S_p.
+\end{equation}
+
+\subsection{Total action split (no SM sector)}
+The total action is decomposed as
+\begin{equation}
+I_{\text{tot}} \;=\; I_{\text{GR}}[g] \;+\; I_{\mathcal H}[g,\mathcal H] \;+\; I_{\text{int}}[g;\mathcal H],
+\end{equation}
+with Einstein--Hilbert term
+\begin{equation}
+I_{\text{GR}}[g] \;=\; \frac{c^3}{16\pi G}\int (R -2\Lambda_0)\sqrt{-g}\,d^4x.
+\end{equation}
+
+\section{Emergent Field Equation from Stationarity}
+
+\subsection{Stationarity condition}
+Mean geometry emerges from stationarity of $\ln Z$:
+\begin{equation}
+\frac{\delta \ln Z}{\delta g^{\mu\nu}(x)} \;=\; 0.
+\label{eq:stationarity}
+\end{equation}
+
+\subsection{Emergent mean-geometry equation}
+The canonical emergent equation is
+\begin{equation}
+\left\langle \widetilde G_{\mu\nu} + \Lambda_0 g_{\mu\nu} \right\rangle
+\;=\;
+\frac{8\pi G}{c^4}\left\langle \widehat{\tau}^{\text{total}}_{\mu\nu}\right\rangle.
+\label{eq:emergentEinstein}
+\end{equation}
+Covariance implies conservation:
+\begin{equation}
+\nabla^\mu \left\langle \widehat{\tau}^{\text{total}}_{\mu\nu}\right\rangle \;=\; 0.
+\label{eq:conservation}
+\end{equation}
+
+\section{Ford Entropy Flux Tensor (Breathing Engine)}
+
+We decompose the total emergent stress-energy operator as
+\begin{equation}
+\widehat{\tau}^{\text{total}}_{\mu\nu}
+\;=\;
+\widehat{\tau}^{(H)}_{\mu\nu}
+\;+\;
+\widehat{\tau}^{(\text{inv})}_{\mu\nu}
+\;+\;
+\widehat{\tau}^{(\text{spec})}_{\mu\nu}.
+\label{eq:taudecomp}
+\end{equation}
+
+\subsection{Entropy density anchor}
+Bekenstein--Hawking area law:
+\begin{equation}
+S_{BH} \;=\; \frac{k_B c^3}{4\hbar G}\,A.
+\end{equation}
+Define entropy surface density
+\begin{equation}
+\eta \;\equiv\;\frac{\delta S}{\delta A}
+\;=\; \frac{k_B c^3}{4\hbar G}\; f_{bh}(z).
+\label{eq:eta}
+\end{equation}
+
+\subsection{Inhale tensor (null-congruence form)}
+Let $k^\mu$ be a null generator and $\sigma_{\mu\nu}$ the shear. Define
+\begin{equation}
+\boxed{
+\widehat{\tau}^{(H)}_{\mu\nu}
 =
-holder.
-4.4 Exhale / inversion tensor (burst-like release; WH deprecated)
-Earlier drafts used “white-hole recoil” language. In the latest formulation we deprecate an
-explicit WH population sector: inversion is treated as an endogenous burst/release channel
-triggered by congruence focusing and internal operator stress (Sections 9–9.3). We write
-τ(inv)
-µν
-=−γinv(z) τ(H)
-µν + ∆τ(inv)
-µν. (14)
-with a minimal closure term
-∆τ(inv)
-µν
-ℏc
+\frac{\hbar c}{2\pi}
+\left[
+\left(k_{(\mu}k_{\nu)} - \frac12 (k^\lambda k_\lambda) g_{\mu\nu}\right)\eta
+\;+\;
+\sigma_{\mu\nu}\eta
+\right].
+}
+\label{eq:tauH}
+\end{equation}
+
+\subsection{Inversion / exhale sector}
+We define the inversion channel as
+\begin{equation}
+\boxed{
+\widehat{\tau}^{(\text{inv})}_{\mu\nu}
 =
-2π
-k(µkν) ηinv, ηinv =
-kBc3
-4ℏG finv(z). (15)
-3
-4.5 Emergent spectrum stress (IR replacement for fundamental SM)
-Modular horizon modes with gaps ∆sn define an emergent spectrum stress
-τ(spec)
-µν ≡ Tµν emergent
+-\gamma_{\text{inv}}(z)\,\widehat{\tau}^{(H)}_{\mu\nu}
++
+\Delta \widehat{\tau}^{(\text{inv})}_{\mu\nu}.
+}
+\label{eq:tauinv}
+\end{equation}
+A minimal closure is
+\begin{equation}
+\Delta \widehat{\tau}^{(\text{inv})}_{\mu\nu}
 =
-n
-dΠn Wn(∆sn) p(n)
-µ p(n)
-ν. (16)
-where dΠn is an invariant phase-space measure and Wn a weight fixed by modular gaps.
-5 Thermodynamic and geometric anchors
-5.1 Local first-law structure
-A Jacobson-style local anchor is
-ℏa
-2πkBc
-, (17)
-1
-θ2
-kc2
-a2 (20)
-δQ= TδS, T=
-with T the Unruh temperature for acceleration a.
-5.2 Raychaudhuri focusing
-For a null congruence with expansion θ, shear σµν and twist ωµν,
-dθ
-dλ=−
-2
-−σµνσµν + ωµνωµν −Rµνkµkν
-. (18)
-6 Cosmology reduction (FRW channel)
-Assume an isotropic mean geometry
-ds2
-=−c2dt2 + a(t)2 dr2
-1−kr2 + r2dΩ2 , H ≡˙
-a
-. (19)
-a
-Then a comparison-ready effective Friedmann form is
-H2(z) = 8πG
-3 ρeff(z)−
-, ρeff = ρspec + ρH + ρinv. A compact phenomenology channel used in earlier fitting work can be recorded as
-H2(z) = H2
-0 Ωm(1 + z)3 + Ωbh(1 + z)2.3e−1.1(1+z)
-. (21)
-7 Why the theory uses a three-fold microstructure
-7.1 Three folds: the first point where orientation and memory can exist
-The microstructure is built from a three-fold patch logic. This is the minimal fold at which
-repeated identification forces a twist/lock:
-• One fold: a deformation can be undone without introducing protected orientation.
-• Two folds: the surface can still be smoothed without forcing a twist.
-• Three folds: consistency forces a twist or lock, making a chirality-sensitive seam sector
-unavoidable.
-In this model, the third fold is where (i) chiral seam operators become physical, (ii) a protected
-qutrit subspace appears, and (iii) a full su(3) algebra can be forced from local seam couplings.
-4
-. (22)
-8 Operator microstructure and gauge emergence
-8.1 Qutrit subspace
-Consider three patches, each with a two-state local degree of freedom. The full space is
-H= (C2)⊗3 (dimension 8). We restrict to the one-excitation subspace
-Hq = span{|100⟩,|010⟩,|001⟩}∼
-= C3
-Let Πq be the projector onto Hq.
-8.2 One-, two-, and three-patch ladder (why SU(2) appears before SU(3))
-The same seam-coupling construction yields the familiar ladder:
-• 1 patch: a single local phase rotation gives a U(1) sector.
-• 2 patches: a seam doublet supports an su(2) subalgebra.
-• 3 patches: the one-excitation qutrit forces su(3).
-This is not imposed; it is the minimal algebra compatible with the number of interacting patches
-and the requirement of Hermitian, traceless generators.
-8.3 Explicit SU(2) seam-doublet matrix (two patches)
-For two patches the Hilbert space is H12 = C2 ⊗C2 with basis {|00⟩,|01⟩,|10⟩,|11⟩}. A
-representative seam-coupling operator used in the construction (written here explicitly to ensure
-replicability) is
-K12(ϵ= 1,J = 2) =
-   
-2 0 0 2
-0 0 2 0
-0 2 0 0
-2 0 0−2
-   
-(23)
-When restricted to the appropriate doublet sector, the induced traceless Hermitian generators
-close an su(2) algebra. The three-patch construction below generalizes this same physical idea:
-seam exchange and seam chirality projected onto the qutrit.
-8.4 Why eight operators (and why they are forced)
-The operator basis is not hand-picked. It is forced by:
-1. Target algebra su(3) has dimension 8.
-2. Only three physical seams exist: (12),(23),(31).
-3. Each seam admits an even exchange channel and an odd chiral channel, yielding two
-operators per seam: Xij and Yij (six total).
-4. A two-dimensional Cartan subalgebra is required: D3 and D8.
-Hence the minimal forced dictionary is
-Dmin = {X12,Y12,X23,Y23,X31,Y31,D3,D8}. (24)
-5
-8.5 Operator construction (from physical couplings)
-Project Pauli-coupling forms onto the qutrit:
-Xij ≡Πq σx
-i σx
-j + σy
-iσy
-j Πq, (25)
-Yij ≡Πq σx
-i σy
-j−σy
-iσx
-j Πq, (26)
-1
-D3 ≡Πq(σz
-1−σz
-2) Πq, D8 ≡
-Πq(σz
-1 + σz
-2−2σz
-3) Πq. (27)
-√3
-8.6 Matrix realization: Gell–Mann basis
-In basis {|100⟩,|010⟩,|001⟩}, the Gell–Mann matrices are
-1 0 0
-λ1 =  0 1 0
-i 0 0
-0 0 0
- , λ2 =  0−i 0
-0−1 0
-0 0 0
- , λ3 =  1 0 0
-0 0 0
- , (28)
-0 0 0
-λ4 =  0 0 1
-0 0 0
-1 0 0
- , λ5 =  0 0−i
-0 0 1
-i 0 0
- , λ6 =  0 0 0
-0 1 0
- , (29)
-λ7 =  0 0 0
-0 0−i
-0 i 0
- , λ8 =
-Define generators Ta ≡λa/2.
-1
-0 1 0
-√3
- 1 0 0
-0 0−2
- . (30)
-8.7 Plan A: replicable non-overfit emergence check
-To demonstrate emergence rather than assertion:
-1. Compute Dmin from projections.
-2. Use Hilbert–Schmidt inner product ⟨A,B⟩= Tr(A†B).
-3. Form Gram matrix GAB = ⟨XA,XB⟩and verify rank(G) = 8.
-4. Express the basis {Ta}in the span of Dmin and compute residuals.
-5. Check commutator closure by projecting [XA,XB] back onto the span and measuring
-Frobenius-norm closure errors.
-9 Environment deformation and inversion triggering
-9.1 Deformation-only-by-coefficients
-Allow only coefficient deformations (no new operators):
-XA(z) = aA(z) XA, XA ∈Dmin. (31)
-9.2 Gate Ξ(z) from focusing (Raychaudhuri)
-Encode activation as a smooth gate
-Ξ(z) = 1
-1 + exp Γ⋆−Γ(z)
-∆Γ
-. (32)
-6
-9.3 Commutator stress invariant Γ(z)
-Define
-Γ(z) ≡
-A<B
-Tr [XA(z),XB(z)]†[XA(z),XB(z)]
-1/2
-. (33)
-9.4 Inversion strength lock
-Lock inversion to internal stress and the gate:
-γinv(z) = κγ Γ(z) finv(z), finv(z) ≡Ξ(z). (34)
-An optional near-threshold shear-amplified factor for phenomenology is
-γinv →γinv 1 + 0.05 σ2(z)
-σ2
-crit
-. (35)
-10 Mass prediction via third-fold anchored inversion
-Use the same internal stress invariant Γ in three fold sectors g∈{1,2,3}with g= 3 the third-fold
-anchor (tau). Fix the overall scale by one anchor mτ ≡mg=3. Then the ripple-back prediction
-rule is
-mg−1 = mg
-Γg−1
-(g= 3 →2 →1). (36)
-Γg
-Hence the mass ratios are pure outputs once Γg are computed:
-mµ
-mτ
+\frac{\hbar c}{2\pi}\left(k_{(\mu}k_{\nu)}\right)\eta_{\text{inv}},
+\qquad
+\eta_{\text{inv}}=\frac{k_B c^3}{4\hbar G}\, f_{\text{inv}}(z).
+\label{eq:tauinvclosure}
+\end{equation}
+
+\subsection{Emergent spectrum stress tensor}
+Emergent matter is encoded as spectral stress
+\begin{equation}
+\widehat{\tau}^{(\text{spec})}_{\mu\nu}
+\equiv
+\left\langle \widehat{T}_{\mu\nu}\right\rangle_{\text{emergent}}
 =
-Γ2
-Γ3
-me
-,
-mµ
-=
-Γ1
-Γ2
-. (37)
-11 Cyclic conditions (turnaround and bounce)
-Turnaround satisfies H(t⋆) = 0, equivalently
-A bounce requires H(tb) = 0 and
-ρeff(t⋆) = 3kc2
-8πGa(t⋆)2. (38)
-˙
-H(tb) >0. Near-bounce the effective condition can be written
-(39)
-(ρH + ρinv) + 3(pH + pinv) <0. 12 Replication checklist
-1. Construct Πq and compute Xij,Yij,D3,D8.
-2. Verify Hermiticity, tracelessness, and Gram rank 8.
-3. Map Dmin to the Gell–Mann basis and compute residuals.
-4. Check commutator closure and quantify closure errors.
-5. Choose deformations aA(z), compute Γ(z) and Ξ(z).
-6. Compute γinv(z) from the lock.
-7. (Cosmology channel) use fbh(z) = ρbh/ρcrit to build η.
-8. (Mass channel) compute Γ1,Γ2,Γ3 and output mµ,me using one anchor mτ.
-7
-Scope note
-The “Hope” document is used only as conceptual scaffolding; any equations are taken from the
-canonical statements in this paper. White-hole population language is deprecated in the latest
-formulation; inversion is represented solely by τ(inv)
-µν with stress-locked activation.
-8
+\sum_{n}\int d\Pi_n\;\; \mathcal W_n \;\;
+p^{(n)}_\mu p^{(n)}_\nu,
+\qquad
+\mathcal W_n=\mathcal W(\Delta s_n).
+\label{eq:tauspec}
+\end{equation}
+
+\section{Thermodynamic and Geometric Anchors}
+
+\subsection{Horizon first law (Jacobson-style)}
+\begin{equation}
+\delta Q \;=\; T\,\delta S,
+\qquad
+T \;=\; \frac{\hbar a}{2\pi k_B c}.
+\end{equation}
+
+\subsection{Raychaudhuri focusing}
+For a null congruence,
+\begin{equation}
+\frac{d\theta}{d\lambda} =
+-\frac12 \theta^2
+-\sigma_{\mu\nu}\sigma^{\mu\nu}
++\omega_{\mu\nu}\omega^{\mu\nu}
+-R_{\mu\nu}k^\mu k^\nu.
+\label{eq:raychaudhuri}
+\end{equation}
+
+\section{Cosmological Reduction (FRW)}
+
+Assume FRW mean geometry
+\begin{equation}
+ds^2=-c^2dt^2+a(t)^2\left(\frac{dr^2}{1-kr^2}+r^2d\Omega^2\right),
+\qquad
+H\equiv \frac{\dot a}{a}.
+\end{equation}
+Effective Friedmann form:
+\begin{equation}
+\boxed{
+H^2(z)=\frac{8\pi G}{3}\rho_{\text{eff}}(z)-\frac{kc^2}{a^2},
+\qquad
+\rho_{\text{eff}}=\rho_{\text{spec}}+\rho_H+\rho_{\text{inv}}.
+}
+\end{equation}
+
+\subsection{Working phenomenology channel}
+\begin{equation}
+\boxed{
+H^2(z)=H_0^2\left[\Omega_m(1+z)^3+\Omega_{bh}(1+z)^{2.3}e^{-1.1(1+z)}\right].
+}
+\label{eq:Hfit}
+\end{equation}
+
+\section{Core Functions}
+
+\subsection{$f_{bh}(z)$ from population-driven horizon area}
+Define a BH-area proxy
+\begin{equation}
+\mathcal A_{bh}(z)\propto \int dM\,n(M,z)\,M^2,
+\end{equation}
+and normalize
+\begin{equation}
+f_{bh}(z)\equiv \frac{\mathcal A_{bh}(z)}{\mathcal A_{bh}(0)}.
+\end{equation}
+
+\subsection{Inversion activation and breathing diagnostic}
+\begin{equation}
+f_{\text{inv}}(z)=\mathcal F\!\left(f_{bh}(z),\Xi(z)\right),
+\qquad
+\mathcal B(z)=f_{bh}(z)-\lambda f_{\text{inv}}(z).
+\end{equation}
+
+\section{Cyclic Conditions}
+
+\subsection{Turnaround}
+\begin{equation}
+H(t_\star)=0
+\quad\Longleftrightarrow\quad
+\rho_{\text{eff}}(t_\star)=\frac{3kc^2}{8\pi G\,a(t_\star)^2}.
+\end{equation}
+
+\subsection{Bounce}
+\begin{equation}
+H(t_b)=0,\qquad \dot H(t_b)>0,
+\end{equation}
+with an effective condition near bounce
+\begin{equation}
+\boxed{
+\left(\rho_H+\rho_{\text{inv}}\right)+3\left(p_H+p_{\text{inv}}\right)<0.
+}
+\end{equation}
+
+\section{Minimal SU(3) Emergence on the Qutrit}
+
+\subsection{Qutrit subspace}
+Let the three-patch Hilbert space be $(\mathbb C^2)^{\otimes 3}$ and restrict to the one-excitation sector
+\begin{equation}
+\mathcal H_q=\mathrm{span}\{|100\rangle,|010\rangle,|001\rangle\}\cong\mathbb C^3.
+\end{equation}
+Let $\Pi_q$ be the projector onto $\mathcal H_q$.
+
+\subsection{Minimal operator dictionary}
+Define the minimal forced dictionary
+\begin{equation}
+\mathcal D_{\min}=\{X_{12},Y_{12},X_{23},Y_{23},X_{31},Y_{31},D_3,D_8\}.
+\end{equation}
+The operators arise from projected Pauli couplings:
+\begin{align}
+X_{ij} &\equiv \Pi_q\left(\sigma_i^x\sigma_j^x+\sigma_i^y\sigma_j^y\right)\Pi_q,\\
+Y_{ij} &\equiv \Pi_q\left(\sigma_i^x\sigma_j^y-\sigma_i^y\sigma_j^x\right)\Pi_q,\\
+D_3 &\equiv \Pi_q\left(\sigma_1^z-\sigma_2^z\right)\Pi_q,\\
+D_8 &\equiv \frac{1}{\sqrt 3}\Pi_q\left(\sigma_1^z+\sigma_2^z-2\sigma_3^z\right)\Pi_q.
+\end{align}
+
+\subsection{Gell--Mann matrices}
+We identify the standard SU(3) generators $\lambda_a$ on $\mathcal H_q$:
+\begin{align}
+\lambda_1&=\begin{pmatrix}0&1&0\\1&0&0\\0&0&0\end{pmatrix},&
+\lambda_2&=\begin{pmatrix}0&-i&0\\ i&0&0\\0&0&0\end{pmatrix},&
+\lambda_3&=\begin{pmatrix}1&0&0\\0&-1&0\\0&0&0\end{pmatrix},\\[6pt]
+\lambda_4&=\begin{pmatrix}0&0&1\\0&0&0\\1&0&0\end{pmatrix},&
+\lambda_5&=\begin{pmatrix}0&0&-i\\0&0&0\\ i&0&0\end{pmatrix},&
+\lambda_6&=\begin{pmatrix}0&0&0\\0&0&1\\0&1&0\end{pmatrix},\\[6pt]
+\lambda_7&=\begin{pmatrix}0&0&0\\0&0&-i\\0&i&0\end{pmatrix},&
+\lambda_8&=\frac{1}{\sqrt 3}\begin{pmatrix}1&0&0\\0&1&0\\0&0&-2\end{pmatrix}.
+\end{align}
+
+\section{Operator Stress and Inversion Lock}
+
+\subsection{Commutator stress invariant}
+Define the commutator stress invariant for a deformed operator set $\{\widetilde T^a\}$:
+\begin{equation}
+\Gamma
+\;\equiv\;
+\left(
+\sum_{a<b}
+\mathrm{Tr}
+\Big(
+[\widetilde T^{\,a},\widetilde T^{\,b}]^\dagger
+[\widetilde T^{\,a},\widetilde T^{\,b}]
+\Big)
+\right)^{1/2}.
+\label{eq:Gamma}
+\end{equation}
+
+\subsection{Inversion strength lock}
+We lock inversion strength to modular stress and activation:
+\begin{equation}
+\boxed{
+\gamma_{\rm inv}(z)=\kappa_\gamma\,\Gamma(z)\,f_{\rm inv}(z).
+}
+\end{equation}
+
+\subsection{Environment deformation (coefficients only)}
+Let the environment modulate coefficients on a fixed dictionary:
+\begin{equation}
+\widetilde X_A(z)=a_A(z)\,X_A,\qquad X_A\in\mathcal D_{\min}.
+\end{equation}
+A smooth activation gate may be defined by a logistic trigger in $\Gamma(z)$:
+\begin{equation}
+\Xi(z)=\frac{1}{1+\exp\left(\frac{\Gamma_\star-\Gamma(z)}{\Delta\Gamma}\right)}.
+\end{equation}
+
+\section{Lepton Masses from Horizon Operator Stress}
+
+\subsection{Mass scaling from commutator stress}
+With one anchor mass $m_\tau$,
+\begin{equation}
+m_x = m_\tau \sqrt{\frac{\Gamma_x}{\Gamma_3}}.
+\end{equation}
+
+\section{Timing Calibration Layer (Non-fundamental)}
+We record the calibration values used for breath-phase coherence:
+\begin{equation}
+\nu_{\text{tone}}=42.00003862,\qquad
+\nu_{\text{osc}}\approx 10000003862,\qquad
+c_{\text{eff}}=c\cdot 1.000003862.
+\end{equation}
+
+\section{References}
+(References to be inserted.)
+
+\end{document}
